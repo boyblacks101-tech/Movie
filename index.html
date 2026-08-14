@@ -1,231 +1,265 @@
-<div class="app">
-  <header class="hero">
-    <nav class="navbar">
-      <div class="brand">
-        <div class="brand-logo">🎬</div>
-        <div>
-          <h1>MovieLingo</h1>
-          <p>Learn English through movies and shows</p>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <button id="themeButton" class="theme-button">☀️</button>
-    </nav>
+  <title>MovieLingo</title>
 
-    <div class="hero-content">
-      <div class="hero-copy">
-        <span class="eyebrow">ENGLISH LISTENING GUIDE</span>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-        <h2>Find the perfect show for your English level</h2>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
 
-        <p>
-          Explore movies, series, anime and animation organized by estimated
-          listening difficulty.
-        </p>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="brand">
+          <div class="brand-logo">🎬</div>
 
-        <div class="hero-buttons">
-          <button id="startButton" class="primary-button">
-            Start exploring →
-          </button>
-
-          <button id="randomButton" class="secondary-button">
-            Random pick 🎲
-          </button>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="circle circle-one"></div>
-        <div class="circle circle-two"></div>
-        <div class="movie-icon">🎞️</div>
-
-        <span class="floating-level level-one">A2</span>
-        <span class="floating-level level-two">B2</span>
-        <span class="floating-level level-three">C1</span>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="stats">
-      <div class="stat-card">
-        <strong id="totalCount">0</strong>
-        <span>Total titles</span>
-      </div>
-
-      <div class="stat-card">
-        <strong id="seriesCount">0</strong>
-        <span>Series & anime</span>
-      </div>
-
-      <div class="stat-card">
-        <strong id="movieCount">0</strong>
-        <span>Movies</span>
-      </div>
-
-      <div class="stat-card favorite-stat">
-        <strong id="favoriteCount">0</strong>
-        <span>Favorites</span>
-      </div>
-    </section>
-
-    <section id="library" class="library-section">
-      <div class="section-heading">
-        <div>
-          <span class="section-label">LIBRARY</span>
-          <h2>Watch library</h2>
-        </div>
-
-        <span id="resultCount" class="result-count">0 results</span>
-      </div>
-
-      <div class="filter-box">
-        <div class="search-wrapper">
-          <span>⌕</span>
-
-          <input
-            id="searchInput"
-            type="search"
-            placeholder="Search movies, shows or anime..."
-          />
-
-          <button id="clearSearch" class="clear-button">×</button>
-        </div>
-
-        <div class="filters">
-          <div class="filter">
-            <label for="levelFilter">Language level</label>
-
-            <select id="levelFilter">
-              <option value="all">All levels</option>
-              <option value="A2">A2</option>
-              <option value="B1">B1</option>
-              <option value="B2">B2</option>
-              <option value="C1">C1</option>
-            </select>
-          </div>
-
-          <div class="filter">
-            <label for="typeFilter">Format</label>
-
-            <select id="typeFilter">
-              <option value="all">All formats</option>
-              <option value="movie">Movie</option>
-              <option value="series">Series</option>
-              <option value="anime">Anime</option>
-              <option value="animation">Animation</option>
-              <option value="manga">Manga</option>
-            </select>
-          </div>
-
-          <div class="filter">
-            <label for="watchFilter">Viewing method</label>
-
-            <select id="watchFilter">
-              <option value="all">All methods</option>
-              <option value="dub">English dub</option>
-              <option value="sub">English subtitles</option>
-              <option value="original">Original English</option>
-            </select>
-          </div>
-
-          <div class="filter">
-            <label for="sortFilter">Sort by</label>
-
-            <select id="sortFilter">
-              <option value="recommended">Recommended</option>
-              <option value="level">Language level</option>
-              <option value="name">Name</option>
-              <option value="favorites">Favorites</option>
-            </select>
+          <div>
+            <h1>MovieLingo</h1>
+            <p>Learn English through movies and shows</p>
           </div>
         </div>
 
-        <div class="quick-filters">
-          <button class="quick-filter active" data-filter="all">All</button>
-          <button class="quick-filter" data-filter="easy">
-            Beginner friendly
-          </button>
-          <button class="quick-filter" data-filter="medium">
-            Intermediate
-          </button>
-          <button class="quick-filter" data-filter="hard">
-            Advanced
-          </button>
-          <button class="quick-filter" data-filter="favorites">
-            Favorites
-          </button>
+        <button id="themeButton" class="theme-button" aria-label="Change theme">
+          ☀️
+        </button>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="eyebrow">ENGLISH LISTENING GUIDE</span>
+
+          <h2>Find the perfect show for your English level</h2>
+
+          <p>
+            Explore movies, series, anime and animation organized by estimated
+            listening difficulty.
+          </p>
+
+          <div class="hero-buttons">
+            <button id="startButton" class="primary-button">
+              Start exploring →
+            </button>
+
+            <button id="randomButton" class="secondary-button">
+              Random pick 🎲
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="main-film">🎞️</div>
+
+          <span class="floating-level level-a2">A2</span>
+          <span class="floating-level level-b2">B2</span>
+          <span class="floating-level level-c1">C1</span>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="level-section">
-      <div class="section-heading">
-        <div>
-          <span class="section-label">CEFR GUIDE</span>
-          <h2>Level guide</h2>
+    <main>
+      <section class="stats">
+        <div class="stat-card">
+          <strong id="totalCount">0</strong>
+          <span>Total titles</span>
         </div>
 
-        <p class="section-description">
-          Levels are estimated according to dialogue speed, vocabulary,
-          accents and slang.
-        </p>
-      </div>
+        <div class="stat-card">
+          <strong id="seriesCount">0</strong>
+          <span>Series and anime</span>
+        </div>
 
-      <div class="level-grid">
-        <button class="level-card a2" data-level="A2">
-          <strong>A2</strong>
-          <span>Great for starters</span>
-          <small>Clear everyday dialogue</small>
-        </button>
+        <div class="stat-card">
+          <strong id="movieCount">0</strong>
+          <span>Movies</span>
+        </div>
 
-        <button class="level-card b1" data-level="B1">
-          <strong>B1</strong>
-          <span>Intermediate</span>
-          <small>Natural conversations</small>
-        </button>
+        <div class="stat-card">
+          <strong id="favoriteCount">0</strong>
+          <span>Favorites</span>
+        </div>
+      </section>
 
-        <button class="level-card b2" data-level="B2">
-          <strong>B2</strong>
-          <span>Upper-intermediate</span>
-          <small>Idioms and faster speech</small>
-        </button>
+      <section id="library" class="library-section">
+        <div class="section-header">
+          <div>
+            <span class="section-label">LIBRARY</span>
+            <h2>Watch library</h2>
+          </div>
 
-        <button class="level-card c1" data-level="C1">
-          <strong>C1</strong>
-          <span>Advanced</span>
-          <small>Slang, irony and accents</small>
-        </button>
-      </div>
-    </section>
+          <span id="resultCount" class="result-count">0 results</span>
+        </div>
 
-    <section class="content-section">
-      <div id="emptyState" class="empty-state hidden">
-        <div>🕵️</div>
-        <h3>No titles found</h3>
-        <p>Try changing your search or filters.</p>
-        <button id="resetButton" class="primary-button">
-          Clear filters
-        </button>
-      </div>
+        <div class="filter-panel">
+          <div class="search-box">
+            <span>⌕</span>
 
-      <div id="cardsGrid" class="cards-grid"></div>
-    </section>
-  </main>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search movies, shows or anime..."
+            />
 
-  <footer>
-    <span>Made for learning English through entertainment 🎬</span>
-    <span>Levels are approximate.</span>
-  </footer>
-</div>
+            <button id="clearSearch" class="clear-search">×</button>
+          </div>
 
-<div id="modal" class="modal hidden">
-  <div class="modal-background" data-close-modal></div>
+          <div class="filters">
+            <div class="filter-group">
+              <label for="levelFilter">Language level</label>
 
-  <div class="modal-window">
-    <button class="modal-close" data-close-modal>×</button>
-    <div id="modalContent"></div>
+              <select id="levelFilter">
+                <option value="all">All levels</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="C1">C1</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="typeFilter">Format</label>
+
+              <select id="typeFilter">
+                <option value="all">All formats</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="anime">Anime</option>
+                <option value="animation">Animation</option>
+                <option value="manga">Manga</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="watchFilter">Viewing method</label>
+
+              <select id="watchFilter">
+                <option value="all">All methods</option>
+                <option value="dub">English dub</option>
+                <option value="sub">English subtitles</option>
+                <option value="original">Original English</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="sortFilter">Sort by</label>
+
+              <select id="sortFilter">
+                <option value="recommended">Recommended</option>
+                <option value="level">Language level</option>
+                <option value="name">Name</option>
+                <option value="favorites">Favorites</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="quick-filters">
+            <button class="quick-filter active" data-quick="all">
+              All
+            </button>
+
+            <button class="quick-filter" data-quick="easy">
+              Beginner friendly
+            </button>
+
+            <button class="quick-filter" data-quick="medium">
+              Intermediate
+            </button>
+
+            <button class="quick-filter" data-quick="hard">
+              Advanced
+            </button>
+
+            <button class="quick-filter" data-quick="favorites">
+              Favorites
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-section">
+        <div class="section-header">
+          <div>
+            <span class="section-label">CEFR GUIDE</span>
+            <h2>Level guide</h2>
+          </div>
+
+          <p class="section-description">
+            Levels are approximate and depend on dialogue speed, vocabulary,
+            accents and slang.
+          </p>
+        </div>
+
+        <div class="level-grid">
+          <button class="level-card a2-card" data-level="A2">
+            <strong>A2</strong>
+            <span>Great for starters</span>
+            <small>Clear everyday dialogue</small>
+          </button>
+
+          <button class="level-card b1-card" data-level="B1">
+            <strong>B1</strong>
+            <span>Intermediate</span>
+            <small>Natural conversations</small>
+          </button>
+
+          <button class="level-card b2-card" data-level="B2">
+            <strong>B2</strong>
+            <span>Upper-intermediate</span>
+            <small>Idioms and faster speech</small>
+          </button>
+
+          <button class="level-card c1-card" data-level="C1">
+            <strong>C1</strong>
+            <span>Advanced</span>
+            <small>Slang, irony and accents</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div id="emptyState" class="empty-state hidden">
+          <div>🕵️</div>
+          <h3>No titles found</h3>
+          <p>Try changing your search or filters.</p>
+
+          <button id="resetButton" class="primary-button">
+            Clear filters
+          </button>
+        </div>
+
+        <div id="cardsGrid" class="cards-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Made for learning English through entertainment 🎬</span>
+      <span>Levels are approximate.</span>
+    </footer>
   </div>
-</div>
 
-<div id="toast" class="toast"></div>
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-window">
+      <button class="modal-close" data-close-modal>×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
